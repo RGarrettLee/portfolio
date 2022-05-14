@@ -1,0 +1,94 @@
+:root {
+    --dark-bg: #15133C;
+    --light-bg: #73777B;
+    --bright-bg: #EC994B;
+    --light-accent: #F1EEE9;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    display: block;
+    background-color: var(--dark-bg);
+    color: white;
+    padding: 20px;
+    margin: auto auto;
+    width: 100%;
+}
+
+nav {
+    padding-top: 0.7em;
+    float: right;
+}
+
+nav ul {
+    float: right;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-flex;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    align-items: center;
+    margin: 0 0.25em 0 1em;
+    font-size: 1.5rem;
+}
+
+nav ul li a:hover {
+    cursor: pointer;
+    text-shadow: 0 0 10px white, 0 0 30px var(--light-bg);
+}
+
+body {
+    background-color: var(--light-bg);
+}
+
+footer {
+    position: fixed;
+    padding: 10px 10px 0 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: grey;
+    text-align: center;
+}
+
+footer p {
+    color: white;
+    font-size: 20px;
+}
+
+.name-logo {
+    display: inline-block;
+    font-size: 2.5rem;
+    cursor: default;
+}
+
+.parallax-banner {
+    background-image: url("../images/parallax.jpg");
+    min-height: 10em;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media screen and (max-width: 672px) { /* mobile size move transition to hamburger dropdown */
+    nav {
+        display: none;
+    }
+
+    header {
+        text-align: center;
+    }
+}

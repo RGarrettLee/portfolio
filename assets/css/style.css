@@ -78,6 +78,7 @@ body {
 main {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
 section ul {
@@ -175,7 +176,7 @@ footer nav ul li a {
     position: relative;
     width: 70%;
     display: inline-block;
-    margin-left: 21%;
+    margin-left: 20.75%;
     font-size: 20px;
     flex-wrap: wrap;
     color: var(--light-accent);
@@ -183,18 +184,55 @@ footer nav ul li a {
     padding-left: 50px;
 }
 
-.highlighted-project {
-    background-image: url("../images/githubio.png");
-    justify-content: center;
-    object-fit: contain;
+.highlighted-project img {
+    width: 99.8%;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+.grid img {
+    height: 25%;
+    width: 49.7%;
+    filter: blur(3px);
+    transition: 0.3s;
 }
 
-@media screen and (max-width: 819px) { /* mobile size move transition to hamburger dropdown */
+.grid img:hover {
+    filter: blur(0px);
+}
+
+#projects img {
+    border: 3px solid var(--bright-bg);
+}
+
+#contact .content-headers {
+    border-right: 5px solid var(--bright-bg);
+}
+
+#contact .main-content {
+    top: 12px;
+}
+
+#contact ul {
+    list-style-type: circle;
+    display: inline-flex;
+}
+
+#contact ul li {
+    padding-right: 40px;
+}
+
+#contact ul li a {
+    color: var(--light-accent);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1323px) {
+    .grid img {
+        width: 49.5%;
+    }
+}
+
+@media screen and (max-width: 980px) { /* mobile size move transition to hamburger dropdown */
     nav {
         display: none;
     }
@@ -215,7 +253,10 @@ footer nav ul li a {
     footer p {
         float: left;
         padding-left: 30px;
-        margin-right: 6.5rem;
+    }
+
+    footer nav ul {
+        margin-left: 6.5rem;
     }
 
     /* remove divider or make it horizontal, change layout from row to column based */
@@ -238,6 +279,42 @@ footer nav ul li a {
         border: none;
         padding: 0 20px 0 20px;
     }
+
+    .grid {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .grid img {
+        width: 100%;
+    }
+
+    #projects img {
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    footer p {
+        display: none;
+    }
+
+    footer nav ul {
+        margin: 0 0 0 0;
+    }
+
+    footer nav ul li a {
+        position: relative;
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        text-align: center;
+    }
+
+    footer nav ul li a::after {
+        content: " | ";
+    }
+
+
 }
 
 @keyframes textclip {

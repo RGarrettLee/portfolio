@@ -87,7 +87,6 @@ section ul {
 }
 
 footer {
-    position: fixed;
     padding: 10px 10px 0 0;
     bottom: 0;
     width: 100%;
@@ -99,6 +98,7 @@ footer {
 footer p {
     color: var(--light-accent);
     font-size: 20px;
+    margin: 0;
 }
 
 footer nav {
@@ -188,6 +188,7 @@ footer nav ul li a {
     height: 25%;
     width: 49.7%;
     transition: 0.3s;
+    filter: blur(3px);
 }
 
 .main-content img:hover {
@@ -305,8 +306,8 @@ footer nav ul li a {
         padding: 0 20px 0 20px;
     }
 
-    .main-content div {
-        display: inline;
+    .main-content img {
+        filter: blur(0px);
     }
 
     .highlighted-project {
@@ -323,7 +324,7 @@ footer nav ul li a {
     }
 
     #projects img {
-        margin-left: 10px;
+        margin-left: 17px;
     }
 
     #contact .content-headers {
@@ -341,6 +342,10 @@ footer nav ul li a {
 }
 
 @media screen and (max-width: 710px) {
+    footer {
+        position: fixed;
+    }
+    
     footer p {
         display: none;
     }

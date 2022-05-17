@@ -188,11 +188,10 @@ footer nav ul li a {
     height: 25%;
     width: 49.7%;
     transition: 0.3s;
-    filter: blur(3px);
 }
 
 .main-content img:hover {
-    filter: blur(0px);
+    box-shadow: 0 0 10px var(--bright-bg), 0 0 30px var(--bright-bg);
 }
 
 .highlighted-project img {

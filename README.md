@@ -1,15 +1,16 @@
-# My Portfolio
+# Portfolio Website
 
-## This is my portfolio which holds all my notable projects to show potential employers
+## A platform to showcase and link my work to
 
-Some other words go here
+I started this project to put my skills with HTML and CSS to the test and create a website where I could showcase my current work and future projects to show potential employers.
+
+The site also allows anyone to reach out and contact me if they have any inquiries
 
 [The project is live here](https://rgarrettlee.github.io/portfolio)
 
-- Building this portfolio has let me practice my skills using HTML and CSS while also giving me a central location to link my projects
-- 
-
 ---
-## Here is a preview of the site:
+## This is the conceptual wireframe I used as a base design
+![wireframe](./assets/images/wireframe.png)
 
-![mockup](./assets/images/mockup.png)
+## And here is a preview of the site:
+![previw](./assets/images/mockup.png)

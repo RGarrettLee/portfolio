@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Garrett's Portfolio</title>
-        <meta name="description" content="">
+        <meta name="description" content="A portfolio website showing off the work of Garrett Lee">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
     <body>
         <header> <!-- created header with my name on the left with bigger font than the navbar items -->
             <span class="name-logo">Garrett Lee</span>
-            <nav>
+            <nav> <!-- creating navbar in header -->
                 <ul>
                     <li><a href="#about-me">About Me</a></li>
                     <li><a href="#projects">Projects</a></li>
@@ -27,12 +27,15 @@
         <div class="parallax-banner"></div> <!-- creates a nice image banner with a parallax effect -->
 
         <main>
-            <section id="about-me">
-                <aside class="content-headers">
+            <section id="about-me"> <!-- about me section with image of myself and some info about me -->
+                <aside class="content-headers"> <!-- creating header text on the side -->
                     <h1>About Me</h1>
+                    <img class="user-photo" src="./assets/images/120px.png">
                 </aside>
-                <section class="main-content">
+                <section class="main-content"> <!-- creating section with "about me" information -->
                     <h2>I'm a full-stack developer with 5+ years of previous programming experience</h2>
+                    <br>
+                    <h2>I'm especially proficient in Python and conduct most of my work in that language</h2>
                     <br>
                     <h2>Proficient Languages:</h2>
                     <ul>
@@ -49,28 +52,32 @@
             <br>
             <br>
 
-            <section id="projects">
-                <aside class="content-headers">
+            <section id="projects"> <!-- projects section with a large highlighted project as well as projects beneath in a grid formation` -->
+                <aside class="content-headers"> <!-- creating header text on the side -->
                     <h1>Projects</h1>
                 </aside>
-                <div class="main-content highlighted-project">
-                    <a href="https://rgarrettlee.github.io" target="_blank"><img src="./assets/images/githubio.png"></a>
-                </div>
-                <section class="main-content grid">
-                    <a href="https://rgarrettlee.github.io/module-1-challenge" target="_blank"><img src="./assets/images/horisonrefactor.png"></a>
-                    <img class="test" src="./assets/images/horisonrefactor.png">
+                <section class="main-content highlighted-project"> <!-- creating large highlighted project -->
+                    <a href="https://rgarrettlee.github.io/module-1-challenge" target="_blank"><h3>Horiseon Refactor - HTML + CSS</h3><img src="./assets/images/horisonrefactor.png"></a>
+                </section>
+                <section class="container"> <!-- creating grid layout for other projects -->
+                    <section class="card">
+                        <a href="https://rgarrettlee.github.io" target="_blank`"><h3>GitHub.io Site - HTML + CSS</h3><img src="./assets/images/githubio.png"></a>
+                    </section>
+                    <section class="card">
+                        <a href="#"><h3>Placeholder</h3><img src="./assets/images/githubio.png"></a>
+                    </section>
                 </section>
             </section>
 
             <br>
             <br>
 
-            <section id="contact">
-                <aside class="content-headers">
+            <section id="contact"> <!-- contact section with my contact info and links to relevant socials -->
+                <aside class="content-headers"> <!-- creating header text on the side -->
                     <h1>Contact</h1>
                 </aside>
                 <br>
-                <ul class="main-content">
+                <ul class="main-content"> <!-- listing all information -->
                     <li>(647)-998-7939</li>
                     <li>reginaldgarrettlee@gmail.com</li>
                     <li><a href="https://rgarrettlee.github.io/" target="_blank">rgarrettlee.github.io</a></li>
@@ -82,8 +89,9 @@
         <br>
         <br>
         <br>
-        <footer>
-            <nav>
+        <br>
+        <footer> <!-- create a footer with my name and navbar for mobile devices/layouts -->
+            <nav> <!-- creating footer navbar for mobile use -->
                 <ul>
                     <li><a href="#about-me">About Me</a></li>
                     <li><a href="#projects">Projects</a></li>

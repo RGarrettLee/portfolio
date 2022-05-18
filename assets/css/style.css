@@ -1,22 +1,22 @@
-:root {
+:root { /* setting colour variables */
     --dark-bg: #15133C;
     --light-bg: #1A202C;
     --bright-bg: #EC994B;
     --light-accent: #F1EEE9;
 }
 
-* {
+* { /* setting global font-family and box-sizing */
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
 }
 
-html {
+html { /* setting scroll-behaviour and sizings */
     scroll-behavior: smooth;
     block-size: 100%;
     inline-size: 100%;
 }
 
-header {
+header { /* styling header */
     display: block;
     background-color: var(--dark-bg);
     color: white;
@@ -25,21 +25,21 @@ header {
     width: 100%;
 }
 
-header nav {
+header nav { /* setting up navbar */
     padding-top: 0.7em;
     float: right;
 }
 
-header nav ul {
+header nav ul { /* making nav elements float to the right */
     float: right;
     list-style: none;
 }
 
-nav ul li {
+nav ul li { /* ensuring all navbar options are inline */
     display: inline-flex;
 }
 
-header nav ul li a {
+header nav ul li a { /* styling navbar text */
     color: var(--light-accent);
     text-decoration: none;
     align-items: center;
@@ -48,7 +48,7 @@ header nav ul li a {
     position: relative;
 }
 
-nav ul li a::before {
+nav ul li a::before { /* creating underline transition for hover */
     content: "";
     position: absolute;
     width: 100%;
@@ -61,32 +61,32 @@ nav ul li a::before {
     transition: all 0.3s ease-in-out
 }
 
-nav ul li a:hover {
+nav ul li a:hover { /* adding text shine effect on hover and making cursor pointer type */
     cursor: pointer;
     text-shadow: 0 0 10px var(--light-accent), 0 0 30px var(--light-bg);
 }
 
-nav ul li a:hover::before {
+nav ul li a:hover::before { /* showing underline transition effect */
     visibility: visible;
     transform: scaleX(1);
 }
 
-body {
+body { /* setting background colour */
     background-color: var(--light-bg);
 }
 
-main {
+main { /* setting main section */
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
 }
 
-section ul {
+section ul { /* setting up list-style for sections */
     list-style-type:square;
     padding-left: 1em;
 }
 
-footer {
+footer { /* setting up footer */
     padding: 10px 10px 0 0;
     bottom: 0;
     width: 100%;
@@ -95,26 +95,26 @@ footer {
     text-align: center;
 }
 
-footer p {
+footer p { /* styling footer text */
     color: var(--light-accent);
     font-size: 20px;
     margin: 0;
 }
 
-footer nav {
+footer nav { /* hiding footer nav while not mobile sized */
     display: none;
 }
 
-footer nav ul {
+footer nav ul { /* styling footer nav */
     float: right;
     list-style-type: none;
 }
 
-footer nav ul li {
+footer nav ul li { /* making nav items inline */
     display: inline-flex;
 }
 
-footer nav ul li a {
+footer nav ul li a { /* styling footer nav text */
     color: var(--light-accent);
     text-decoration: none;
     align-items: center;
@@ -123,7 +123,7 @@ footer nav ul li a {
     margin-left: 2em;
 }
 
-.name-logo {
+.name-logo { /* styling the name on the header to have a gradient background */
     display: inline-block;
     font-size: 2.5rem;
     cursor: default;
@@ -147,7 +147,15 @@ footer nav ul li a {
     animation: textclip 3.5s linear infinite;
 }
 
-.parallax-banner {
+.user-photo { /* sizing and placing user photo */
+    position: relative;
+    display: inline-flex;
+    margin: 5px 0 0 0;
+    border-radius: 50%;
+    right: 30px;
+}
+
+.parallax-banner { /* creating parallax effect for image banner */
     background-image: url("../images/parallax.jpg");
     min-height: 10em;
     background-attachment: fixed;
@@ -157,7 +165,7 @@ footer nav ul li a {
     margin-bottom: 2rem;
 }
 
-.content-headers {
+.content-headers { /* styling the sidebar header text */
     position: absolute;
     margin-left: 1%;
     padding: 20px;
@@ -167,12 +175,12 @@ footer nav ul li a {
     width: 20%;
 }
 
-.content-headers h1 {
+.content-headers h1 { /* styling the h1 text */
     font-size: 40px;
     color: var(--light-accent);
 }
 
-.main-content {
+.main-content { /* styling the main content to be spaced nicely away from the content-headers */
     position: relative;
     width: 70%;
     display: inline-block;
@@ -184,51 +192,100 @@ footer nav ul li a {
     padding-left: 50px;
 }
 
-.main-content img {
-    height: 25%;
-    width: 49.7%;
+.main-content img,
+.container img { /* setting transition speeds for images */
     transition: 0.3s;
 }
 
-.main-content img:hover {
-    box-shadow: 0 0 10px var(--bright-bg), 0 0 30px var(--bright-bg);
-}
-
-.highlighted-project img {
+.highlighted-project img { /* setting image size for highlighted project */
     width: 99.8%;
 }
 
-#projects img {
+.highlighted-project:hover img { /* adding hover shine effect to highlighted project */
+    box-shadow: 0 0 10px var(--bright-bg), 0 0 30px var(--bright-bg);
+}
+
+.highlighted-project a { /* removing text decoration from <a> tag */
+    text-decoration: none;
+}
+
+.highlighted-project h3 { /* styling highlighted project title text */
+    color: var(--light-accent);
+    font-size: 30px;
+    margin-bottom: 1%;
+    text-align: center;
+}
+
+.container { /* setting up grid placement for smaller project images */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+    padding: 0;
+    margin-left: 20.71%;
+    margin-right: 4%;
+    border-left: 5px solid var(--bright-bg);
+}
+
+.card { /* creating image card + title text */
+    max-inline-size: 50%;
+    margin: .75%;
+    padding: 5%;
+    flex: 1 1;
+}
+
+.card a { /* removing underline from <a> tag */
+    text-decoration: none;
+}
+
+.card h3 { /* styling project title text */
+    display: inline-block;
+    cursor: pointer;
+    color: var(--light-accent);
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.card img { /* setting image sizes and limits */
+    width: 200%;
+    max-height: 576px;
+}
+
+.card:hover img { /* adding hover shine effect to images */
+    box-shadow: 0 0 10px var(--bright-bg), 0 0 30px var(--bright-bg);
+}
+
+#projects img { /* creating border around all images in projects section */
     border: 3px solid var(--bright-bg);
 }
 
-#contact .content-headers {
+#contact .content-headers { /* styling contact content header to make border styling*/
     border-right: 5px solid var(--bright-bg);
 }
 
-#contact .main-content {
+#contact .main-content { /* styling contact content */
     top: 12px;
     border: none;
 }
 
-#contact ul {
+#contact ul { /* styling contact info to be inline */
     display: inline-flex;
     list-style-type: none;
     flex: 1 0 0;
 }
 
-#contact ul li {
+#contact ul li { /* shifting nav items around */
     margin-right: 4%;
     position: relative;
+    margin-bottom: 10px;
 }
 
-#contact ul li a {
+#contact ul li a { /* removing text-decoration from <a> tag, giving font colour and making cursor a pointer */
     color: var(--light-accent);
     text-decoration: none;
     cursor: pointer;
 }
 
-#contact ul li a::before {
+#contact ul li a::before { /* setting up underline animation */
     content: "";
     position: absolute;
     width: 100%;
@@ -241,23 +298,17 @@ footer nav ul li a {
     transition: all 0.3s ease-in-out
 }
 
-#contact ul li a:hover {
+#contact ul li a:hover { /* setting up text shine animation */
     cursor: pointer;
     text-shadow: 0 0 10px var(--light-accent), 0 0 30px var(--light-bg);
 }
 
-#contact ul li a:hover::before {
+#contact ul li a:hover::before { /* executing underline animation */
     visibility: visible;
     transform: scaleX(1);
 }
 
-@media screen and (max-width: 1323px) {
-    .grid img {
-        width: 49.5%;
-    }
-}
-
-@media screen and (max-width: 980px) { /* mobile size move transition to hamburger dropdown */
+@media screen and (max-width: 980px) { /* resizing page elements for mobile */
     nav {
         display: none;
     }
@@ -282,9 +333,19 @@ footer nav ul li a {
 
     footer nav ul {
         margin-left: 6.5rem;
-    }
+    } 
 
-    /* remove divider or make it horizontal, change layout from row to column based */
+    .user-photo {
+        position: relative;
+        display: inline-flex;
+        margin: 5px 0 0 0;
+        border-radius: 50%;
+        right: 0;
+        left: 0;
+        padding: 0;
+        justify-content: center;
+        text-align: center;
+    }
 
     .content-headers {
         position: relative;
@@ -303,23 +364,30 @@ footer nav ul li a {
         float: none;
         border: none;
         padding: 0 20px 0 20px;
-    }
-
-    .main-content img {
-        filter: blur(0px);
-    }
+    } 
 
     .highlighted-project {
         padding-left: 0;
     }
 
-    .grid {
-        padding-left: 0px;
+    .highlighted-project h3 {
+        position: relative;
+        left: 3%;
+        text-align:center;
+    }
+    
+    .container {
+        margin: 0;
+        justify-content: center;
+        border: none;
     }
 
-    .grid img {
-        width: 100%;
-        margin-left: -30px;
+    .card {
+        width: 50%;
+    }
+
+    .card h3 {
+        font-size: 0.75em;
     }
 
     #projects img {
@@ -328,11 +396,14 @@ footer nav ul li a {
 
     #contact .content-headers {
         border-right: none;
+        width: 100%;
     }
 
     #contact ul {
+        margin: 0;
         display: inline-block;
-        text-align: center;
+        float: none;
+        left: 4px;
     }
 
     #contact ul li {
@@ -340,7 +411,7 @@ footer nav ul li a {
     }
 }
 
-@media screen and (max-width: 710px) {
+@media screen and (max-width: 710px) { /* modifying navbar to remove copyright text and center navbar elements */
     footer {
         position: fixed;
     }
@@ -362,7 +433,7 @@ footer nav ul li a {
     }
 }
 
-@keyframes textclip {
+@keyframes textclip { /* used for linear gradient animation */
     to {
         background-position: 200% center;
     }
